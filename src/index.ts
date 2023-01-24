@@ -58,8 +58,6 @@ export const traceProvider: TraceProvider = {
     );
   },
 
-  // if this doesnt work try a fn, and then
-  // I'll need to pass newrelic in the context as a fn arg
   onError: async (err: Error, _) => {
     newrelic.noticeError(err);
   },
