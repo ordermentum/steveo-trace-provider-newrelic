@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "lib": [
-      "es2017",
-      "dom"
+      "ES2017",
     ],
-    "target": "es2017",
-    "module": "commonjs",
+    "target": "ES2017",
+    "module": "CommonJS",
     "allowJs": false,
     "checkJs": false,
     "declaration": true,
