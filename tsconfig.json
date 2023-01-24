@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "target": "es2017",
+    "module": "commonjs",
+    "allowJs": false,
+    "checkJs": false,
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "resolveJsonModule": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "test",
+    "dist",
+    "node_modules"
+  ]
+}
