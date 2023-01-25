@@ -1,0 +1,21 @@
+{
+  "name": "steveo-trace-provider-newrelic",
+  "version": "1.0.0-rc1",
+  "main": "index.ts",
+  "repository": "git@github.com:ordermentum/steveo-trace-provider-newrelic.git",
+  "author": "Ordermentum <engineering@ordermentum.com>",
+  "scripts": {
+    "build": "yarn run tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "newrelic": "^9.8.0"
+  },
+  "devDependencies": {
+    "@types/newrelic": "^9.4.0",
+    "newrelic": "^9.8.0",
+    "typescript": "^4.9.4"
+  }
+}
