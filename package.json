@@ -1,7 +1,7 @@
 {
-  "name": "steveo-trace-provider-newrelic",
-  "version": "1.0.0-rc1",
-  "main": "index.ts",
+  "name": "@ordermentum/steveo-trace-provider-newrelic",
+  "version": "1.0.0",
+  "main": "dist/index.js",
   "repository": "git@github.com:ordermentum/steveo-trace-provider-newrelic.git",
   "author": "Ordermentum <engineering@ordermentum.com>",
   "scripts": {
