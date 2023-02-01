@@ -13,7 +13,7 @@ interface TraceProvider {
   ): Promise<void>;
   onError(err: Error, traceContext: unknown): Promise<void>;
   serializeTraceMetadata(traceContext: unknown): Promise<string>;
-  deserializeTraceMetadata(traceMetadata: string): Promise<unknown>;
+  deserializeTraceMetadata(traceMetadata: unknown): Promise<unknown>;
 }
 
 export const traceProvider: TraceProvider = {
@@ -80,13 +80,22 @@ export const traceProvider: TraceProvider = {
   },
 
   /**
-   * @description Used to propagate traces. Accepts a serialised trace
-   * metadata string and returns a traceContext instance that can be passed
-   * to the wrapHandler.
+   * @description Used to propagate traces. Accepts serialised trace
+   * metadata and returns a traceContext instance that can be passed
+   * to wrapHandler.
    */
   deserializeTraceMetadata: async (
-    traceMetadata: string
-  ): Promise<unknown> => ({
-    distributedTraceHeaders: JSON.parse(traceMetadata),
-  }),
+    traceMetadata: unknown
+  ): Promise<unknown> => {
+    try {
+      if (typeof traceMetadata !== "string") {
+        return {};
+      }
+      return {
+        distributedTraceHeaders: JSON.parse(traceMetadata),
+      };
+    } catch (error) {
+      return {};
+    }
+  },
 };
